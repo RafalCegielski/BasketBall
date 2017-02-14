@@ -1,0 +1,108 @@
+﻿@model BasketBallMVC.ViewModel.TrainingRoomViewModel
+@{
+    ViewBag.Title = "TrainingRoom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12" id="contentMain">
+    <div id="shopFirstStep">
+        <div class="col-md-12" id="textWitaj">Sala treningowa!</div>
+        <div class="col-md-2 shopAbilitiesFirst" id="shopAbilities">
+            <text id="textCategorry" class="center-block text-center distanceText">Wybierz dystans:</text>
+
+            @foreach (var item in Model.Category)
+            {
+                <button name="CategoryButton" type="button" class="btn btn-orange col-md-12 col-xs-4 trainingRoomBtn" data-distance="@item.CategoryDistance">@item.CategoryName</button>
+            }
+        </div>
+        <div id="TrainingRoomSecondStep"></div>
+        <div id="TrainingRoomThirdStep">
+        </div>
+    </div>
+</div>
+@section Styles{
+    @Styles.Render("~/bundles/trainingRoom")
+}
+@section ScriptBottom {
+   @Scripts.Render("~/bundles/trainingRoomScripts")
+    <script>
+        $(document).ready(function () {
+
+            $(document).on("click", '[name="ExerciseCategoryButton"]', function () {
+                $.ajax({
+                    type: "GET",
+                    url: "GetExerciseData",
+                    data: { exerciseName: $(this).attr("id") },
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        obj = jQuery.parseJSON(data);
+                        gold = parseInt(@Model.Gold);
+                        energy = parseInt(@Model.Energy);
+                        prevValueDefence = parseInt(obj.Defence.Value) - 5;
+                        prevValueAtack = parseInt(obj.Atack.Value) - 5;
+                        if (prevValueAtack < 0) {
+                            prevValueAtack = 0;
+                        }
+                        if (prevValueDefence < 0) {
+                            prevValueDefence = 0;
+                        }
+                        htmlToAppend = "<img class=\"col-md-1 arrowTraingingRoom\" src=\"../Content/Images/arrow.png\">" +
+                                   "<div class=\"col-md-5 col-xs-12 shopAbilitiesThird\">" +
+                                                       "<div class=\"progress progress-bar-vertical progressBarTrainingRoom\">" +
+                                   "<div class=\"progress-bar progress-bar-success\" role=\"progressbar\" aria-valuenow=\"" + prevValueDefence + "\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"height: " + prevValueDefence + "%;\">" +
+                                       "<span class=\"sr-only\">" + prevValueDefence + "% Complete</span>" +
+                                   "</div>" +
+                               "</div>" +
+                               "<div class=\"col-md-4 col-xs-5 columnTrainingRoom\">" +
+                                   "<h1> OBRONA: </h1>" +
+                                   "<h4>Aktualnie: " + prevValueDefence + "% </h4>" +
+                                   "<h4>Następnie: " + obj.Defence.Value + "%</h4>" +
+                                   "<h4>Czas: " + obj.Defence.Time + " minut</h4>" +
+                                   "<h4>Koszt: " + obj.Defence.Cost + " złota</h4>" +
+                                   "<h4>Energia: " + obj.Atack.Energy + " pkt</h4>";
+
+                        if (obj.isDefenceCurrentlyTrained == false) {
+                            if ("@Model.IsBusy" == "True" || gold < parseInt(obj.Defence.Cost) || energy < parseInt(obj.Defence.Energy)) {
+                                htmlToAppend += "<button data-exercname=\"" + obj.ExerciseName + "\" id=\"practiceDefence\" name=\"practice\" disabled class=\"btn btn-success col-md-10 col-xs-10 btnTrainInRom\">Ćwicz</button>";
+                            } else {
+                                htmlToAppend += "<button data-exercname=\"" + obj.ExerciseName + "\" id=\"practiceDefence\" name=\"practice\" class=\"btn btn-success col-md-10 col-xs-10  btnTrainInRom\">Ćwicz</button>";
+                            }
+                        } else {
+                            htmlToAppend += "<button data-exercname=\"" + obj.ExerciseName + "\" id=\"cancelDefence\" name=\"cancel\" class=\"btn btn-danger col-md-10 col-xs-10 btnTrainInRom\">Anuluj</button>";
+                        }
+
+                        htmlToAppend += "</div>" +
+
+                               "<div class=\"progress progress-bar-vertical progress2\">" +
+                                   "<div class=\"progress-bar progress-bar-danger \" role=\"progressbar\" aria-valuenow=\"" + prevValueAtack + "\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"height: " + prevValueAtack + "%;\">" +
+                                       "<span class=\"sr-only\">" + prevValueAtack + "% Complete</span>" +
+                                   "</div>" +
+                               "</div>" +
+                               "<div class=\"col-md-4 col-xs-5 columnTrainingRoom\">" +
+                                   "<h1> ATAK: </h1>" +
+                                   "<h4>Aktualnie: " + prevValueAtack + "% </h4>" +
+                                   "<h4>Następnie: " + obj.Atack.Value + "% </h4>" +
+                                   "<h4>Czas: " + obj.Atack.Time + " minut</h4>" +
+                                   "<h4>Koszt: " + obj.Atack.Cost + " złota</h4>" +
+                                   "<h4>Energia: " + obj.Atack.Energy + " pkt</h4>";
+
+                        if (obj.isAtackCurrentlyTrained == false) {
+                            if ("@Model.IsBusy" == "True" || gold < parseInt(obj.Atack.Cost) || energy < parseInt(obj.Atack.Energy)) {
+                                htmlToAppend += "<button data-exercname=\"" + obj.ExerciseName + "\" id=\"practiceAtack\" name=\"practice\" disabled class=\"btn btn-danger col-md-10 col-xs-10 btnTrainInRom\">Ćwicz</button>";
+                            } else {
+                                htmlToAppend += "<button data-exercname=\"" + obj.ExerciseName + "\" id=\"practiceAtack\" name=\"practice\" class=\"btn btn-danger col-md-10 col-xs-10 btnTrainInRom\">Ćwicz</button>";
+                            }
+                        } else {
+                            htmlToAppend += "<button data-exercname=\"" + obj.ExerciseName + "\" id=\"cancelAtack\" name=\"cancel\" class=\"btn btn-danger col-md-10 col-xs-10 btnTrainInRom\">Anuluj</button>";
+                        }
+
+                        htmlToAppend += "</div>" +
+                        "</div>";
+                        $("#TrainingRoomThirdStep").html(htmlToAppend);
+                    }
+                });
+            });
+        });
+    </script>
+}

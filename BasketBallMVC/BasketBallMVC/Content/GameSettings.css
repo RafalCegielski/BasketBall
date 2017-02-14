@@ -1,0 +1,36 @@
+﻿.firstSelect {
+    margin-top: 85px;
+    font-size: 30px;
+}
+
+.settingSelect {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.buttonSet {
+    margin-top: 20px;
+}
+
+.errorSettingMessage {
+    margin-top: 200px;
+    font-size: 40px;
+}
+#contentMain{
+    min-height:650px
+}
+#inContentMain{
+    height:530px
+}
+.lastSelect{
+    margin-bottom:20px
+}
+@media screen and (max-width:492px) {
+ #inContentMain{
+    height:450px
+}
+ .errorSettingMessage {
+    margin-top: 50px;
+    font-size: 35px;
+}
+}

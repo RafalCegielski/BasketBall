@@ -1,0 +1,441 @@
+﻿
+@media screen and (min-width: 1830px) {
+    .arrowTraingingRoom {
+        margin-top: 283px;
+    }
+
+    .shopAbilitiesSecond {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 310px !important;
+        margin-top: 190px !important;
+    }
+
+    .secondTraingingBtnFirst {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .secondTraingingBtn {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .trainingRoomBtn {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .shopAbilitiesThird {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 380px;
+        margin-top: 150px;
+    }
+
+    .progressBarTrainingRoom {
+        margin-left: 45px;
+    }
+
+    .columnTrainingRoom {
+        margin-top: 50px;
+    }
+
+    .btnTrainInRom {
+        margin-top: 20px;
+    }
+
+    .distanceText {
+        margin-top: 10px;
+        font-size: 27px;
+    }
+
+    .shopAbilitiesFirst {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 280px !important;
+        margin-top: 205px !important;
+    }
+}
+
+@media screen and (max-width:1829px) and (min-width:1151px) {
+    .arrowTraingingRoom {
+        margin-top: 283px;
+    }
+
+    .shopAbilitiesSecond {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 310px !important;
+        margin-top: 190px !important;
+    }
+
+    .secondTraingingBtnFirst {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .secondTraingingBtn {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .shopAbilitiesFirst {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 230px !important;
+        margin-top: 225px !important;
+    }
+
+    .distanceText {
+        margin-top: 10px;
+        font-size: 19px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .trainingRoomBtn {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .shopAbilitiesThird {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 380px;
+        margin-top: 150px;
+    }
+
+    .progressBarTrainingRoom {
+        margin-left: 10px;
+        margin-right: 0px !important;
+    }
+
+    .columnTrainingRoom {
+        margin-top: 50px;
+    }
+
+    .btnTrainInRom {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .progress2 {
+        margin-right: 0px !important;
+    }
+}
+
+@media screen and (max-width:1150px) and (min-width:992px) {
+    .arrowTraingingRoom {
+        margin-top: 305px;
+    }
+
+    .secondTraingingBtnFirst {
+        margin-top: 30px;
+        font-size: 19px;
+    }
+
+    .secondTraingingBtn {
+        margin-top: 10px !important;
+        font-size: 19px !important;
+    }
+
+    .shopAbilitiesFirst {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 210px !important;
+        margin-top: 225px !important;
+    }
+
+    .shopAbilitiesSecond {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 260px !important;
+        margin-top: 200px !important;
+    }
+
+    .distanceText {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    h4 {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .trainingRoomBtn {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .shopAbilitiesThird {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 380px;
+        margin-top: 150px;
+    }
+
+    .progressBarTrainingRoom {
+        width: 25px;
+        margin-left: 10px;
+        margin-right: 0px !important;
+    }
+
+    .columnTrainingRoom {
+        margin-top: 75px;
+    }
+
+    .btnTrainInRom {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .progress2 {
+        margin-left: 30px;
+        width: 25px;
+        margin-right: 0px !important;
+    }
+}
+
+@media screen and (max-width:991px) and (min-width:741px) {
+    .arrowTraingingRoom {
+        display: none;
+        margin-top: 305px;
+    }
+
+    .secondTraingingBtnFirst {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .secondTraingingBtn {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .shopAbilitiesFirst {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 170px !important;
+        margin-top: 0px !important;
+    }
+
+    .shopAbilitiesSecond {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 120px !important;
+        margin-top: 40px !important;
+    }
+
+    .distanceText {
+        margin-top: 10px;
+        font-size: 40px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .trainingRoomBtn {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .shopAbilitiesThird {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 380px;
+        margin-top: 40px;
+    }
+
+    .progressBarTrainingRoom {
+        margin-left: 10px;
+        margin-right: 0px !important;
+    }
+
+    .columnTrainingRoom {
+        margin-top: 40px;
+    }
+
+    .btnTrainInRom {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .progress2 {
+        margin-left: -20px;
+        margin-right: 0px !important;
+    }
+}
+
+@media screen and (max-width:740px) and (min-width:376px) {
+    .arrowTraingingRoom {
+        display: none;
+        margin-top: 305px;
+    }
+
+    .secondTraingingBtnFirst {
+        margin-top: 30px;
+        font-size: 6px;
+    }
+
+    .secondTraingingBtn {
+        margin-top: 30px;
+        font-size: 6px;
+    }
+
+    .shopAbilitiesFirst {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 100px !important;
+        margin-top: 0px !important;
+    }
+
+    .shopAbilitiesSecond {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 90px !important;
+        margin-top: 40px !important;
+    }
+
+    .distanceText {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .trainingRoomBtn {
+        margin-top: 10px;
+        font-size: 9px;
+    }
+
+    .shopAbilitiesThird {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 300px;
+        margin-top: 40px;
+    }
+
+    .progressBarTrainingRoom {
+        display: none;
+    }
+
+    .columnTrainingRoom {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .btnTrainInRom {
+        margin-top: 20px;
+        font-size: 10px;
+    }
+
+    .progress2 {
+        display: none;
+    }
+
+    #contentMain {
+        background-color: #ebebeb;
+        min-height: 750px;
+    }
+}
+
+@media screen and (max-width:376px) {
+    .arrowTraingingRoom {
+        display: none;
+        margin-top: 305px;
+    }
+
+    .secondTraingingBtnFirst {
+        margin-top: 30px;
+        font-size: 6px;
+    }
+
+    .secondTraingingBtn {
+        margin-top: 30px;
+        font-size: 6px;
+    }
+
+    .shopAbilitiesFirst {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 100px !important;
+        margin-top: 0px !important;
+    }
+
+    .shopAbilitiesSecond {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 90px !important;
+        margin-top: 40px !important;
+    }
+
+    .distanceText {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .trainingRoomBtn {
+        margin-top: 10px;
+        font-size: 9px;
+    }
+
+    .shopAbilitiesThird {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        height: 250px;
+        margin-top: 40px;
+    }
+
+    .progressBarTrainingRoom {
+        display: none;
+    }
+
+    .columnTrainingRoom {
+        margin-top: 10px;
+        margin-left: 7%;
+    }
+
+    .btnTrainInRom {
+        margin-top: 20px;
+        font-size: 10px;
+    }
+
+    .progress2 {
+        display: none;
+    }
+
+    #contentMain {
+        background-color: #ebebeb;
+        min-height: 750px;
+    }
+}

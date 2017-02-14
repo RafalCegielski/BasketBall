@@ -1,0 +1,63 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model BasketBallMVC.ViewModel.MessageListViewModel
+@{
+    ViewBag.Title = "MessageList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12" id="contentMainMessage">
+    <div class="col-md-12" id="textWitaj">Wiadomości!</div>
+    <img src="../Content/Images/player-11.png" class="col-md-3 imgs" />
+    <div class="col-md-6" id="inContentMainFriends">
+        <div class="MessageContainer">
+            @if (Model.HasFriends)
+            {
+                <button id="BtnNewMessage" class="btn btn-danger col-xs-12 ">Kliknij aby napisać wiadomość</button>
+            }
+            else
+            {
+                <button disabled id="BtnNewMessage" class="btn btn-danger col-xs-12 ">Kliknij aby napisać wiadomość</button>
+            }
+            
+        </div>
+        @if (Model.MessageListPaged != null && Model.MessageListPaged.Count != 0)
+        {
+            <div>
+                @foreach (var item in Model.MessageListPaged)
+                {
+                    <div name="Message" class="message col-md-11 col-xs-10 fontSize20" data-addressee="@item.Sender" id="@item.MessageId" style="@("font-weight: " + (item.isRead ? "normal" : "bold"))">
+
+                        <div class="col-md-4 col-xs-12">
+                            @item.Title
+                        </div>
+                        <div class="col-md-4 col-xs-4 MessageDisplay">
+                            @item.SendDate
+                        </div>
+                        <div class="col-md-3 col-xs-3 MessageDisplay">
+                            @item.Sender
+                        </div>
+                    </div>
+                    <div class="message col-md-1 col-xs-1">
+                        <button id="RemoveMessage_@item.MessageId" name="RemoveMessage"><span class="glyphicon glyphicon-remove"></span></button>
+                    </div>
+                }
+            </div>
+
+            <div id="MessagePagination">
+                @Html.PagedListPager(Model.MessageListPaged, page => Url.Action("MessageList", new { page }), PagedListRenderOptions.ClassicPlusFirstAndLast)
+            </div>
+        }
+        else
+        {
+            <div id="MessageAlternativeText">
+                <text>Aktualnie nie masz żadnych wiadomości</text>
+            </div>
+        }
+    </div>
+    <img src="../Content/Images/player-22.png" class="col-md-3 imgs" />
+</div>
+
+@section ScriptBottom {
+    @Scripts.Render("~/bundles/Messages")
+}

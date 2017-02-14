@@ -1,0 +1,102 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model BasketBallMVC.ViewModel.AdminUsersViewModel
+@{
+    ViewBag.Title = "Users";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="row text-center center-block mainBlock">
+    <div style="margin: 20px 20px 20px 20px">
+
+        <table id="userTable" >
+
+            <thead>
+                <tr>
+
+                    <th class="text-center">Id</th>
+                    <th class="text-center">Username</th>
+                    <th class="text-center">Email</th>
+                    <th class="text-center">Funkcje</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model.pagedPagedList)
+            {
+                    <tr>
+                        <td class="text-center">@item.id</td>
+                        <td class="text-center">@item.name</td>
+                        <td class="text-center">@item.email</td>
+                        <td class="text-center row">
+                            <button class="btn btn-success col-xs-4 col-xs-offset-1 adminUserBtnMessage" name="message" id="AdminMessageTo_@item.id">Wiadomość</button>
+
+                            @if (item.isBanned)
+                            {
+                                <button name="unbanButton" data-UserId="@item.id" class="btn btn-success col-xs-2 adminUserBtnUnbanBan">Unban</button>
+                            }
+                            else
+                            {
+                                <button name="banButton" data-UserId="@item.id" class="btn btn-danger col-xs-2 adminUserBtnUnbanBan">Ban</button>
+                            }
+                            @using (Html.BeginForm("DeleteUser", "Admin", new { userId = item.id }))
+                            {
+                                <button type="submit" class="btn btn-danger col-xs-2 adminUserBtnRemove">Usuń</button>
+                            }
+                            <button name="characterProfile" data-UserId="@item.id" class="btn btn-info col-xs-2 adminUserBtnProfile">Profil</button>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+
+
+@section ScriptBottom {
+
+    @Scripts.Render("~/bundles/adminUserScripts")
+
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var plLanguage = {
+                "processing": "Przetwarzanie...",
+                "search": "Szukaj:",
+                "lengthMenu": "Pokaż _MENU_ pozycji",
+                "info": "Pozycje od _START_ do _END_ z _TOTAL_ łącznie",
+                "infoEmpty": "Pozycji 0 z 0 dostępnych",
+                "infoFiltered": "(filtrowanie spośród _MAX_ dostępnych pozycji)",
+                "infoPostFix": "",
+                "loadingRecords": "Wczytywanie...",
+                "zeroRecords": "Nie znaleziono pasujących pozycji",
+                "emptyTable": "Brak danych",
+                "paginate": {
+                    "first": "Pierwsza",
+                    "previous": "Poprzednia",
+                    "next": "Następna",
+                    "last": "Ostatnia"
+                },
+                "aria": {
+                    "sortAscending": ": aktywuj, by posortować kolumnę rosnąco",
+                    "sortDescending": ": aktywuj, by posortować kolumnę malejąco"
+                }
+            }
+       
+
+            $("#userTable").DataTable({
+                "language": plLanguage
+            });
+        });
+            
+    </script>
+}
+@section Styles {
+    @Styles.Render("~/bundles/adminUser")
+<link href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
+}
+
+
+

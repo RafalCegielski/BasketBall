@@ -1,0 +1,36 @@
+﻿.adminUserBtnProfile {
+    padding: 2px;
+    float: left;
+}
+
+.adminUserBtnRemove {
+    padding: 2px;
+    float: left;
+}
+
+.adminUserBtnUnbanBan {
+    padding: 2px;
+    margin-right: 2px;
+    float: left;
+}
+
+.adminUserBtnMessage {
+    padding: 2px;
+    margin-right: 2px;
+    float: left;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 1200px;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+    width: 300px;
+}
+.mainBlock{
+    margin-top:50px
+}

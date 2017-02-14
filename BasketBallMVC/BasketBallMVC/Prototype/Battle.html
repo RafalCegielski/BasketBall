@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="../Content/Site-Prototype.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/menu.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-1.9.1.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+    <script src="../Scripts/MenuResize.js"></script>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse sidebar" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Aktualna strona</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Strona startowa<span class="menuFont pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+                    <li><a href="#">Wiadomości<span class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope menuFont"></span></a></li>
+                    <li><a href="#">Sala Treningowa<span class="pull-right hidden-xs showopacity glyphicon glyphicon-scale menuFont"></span></a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle menuFont" data-toggle="dropdown">Postać <span class="caret"></span><span class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                            <li><a href="#">Podgląd</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Ranking</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Znajomi</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle menuFont" data-toggle="dropdown">Mecz <span class="caret"></span><span class="pull-right hidden-xs showopacity glyphicon glyphicon-flag"></span></a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                            <li><a href="#">Losowy przeciwnik</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Wybierz przeciwnika</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Gracz-komputer</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle menuFont" data-toggle="dropdown">Miasto <span class="caret"></span><span class="pull-right hidden-xs showopacity glyphicon glyphicon-tower"></span></a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                            <li><a href="#">Sklep</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Restauracja</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Biblioteka</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <!--moje-->
+        <div class="row">
+            <div class="col-md-12" id="topBar">
+                <br />
+                <div id="topBarStats" class="col-md-3 ">
+                    <p class="col-md-12" id="mainTextTopBar">Nick</p>
+                    <p class="col-md-6 stats_main">Gold: 1234</p>
+                    <p class="col-md-6 stats_main">Level: 27</p>
+                    <p class="col-md-6 stats_main">Energia: 80/100</p>
+                    <p class="col-md-6 stats_main">Życie: 70/100</p>
+
+                </div>
+                <div class="container col-md-9 marginTop20">
+                    <div class="row">
+                        <span class="glyphicon glyphicon-heart floatLeft"> &nbsp;</span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                <span class="sr-only">100% Complete (success)</span>
+                            </div>
+                            <span class="progress-completed">100%</span>
+                        </div>
+                        <span class="glyphicon glyphicon-adjust floatLeft"> &nbsp;</span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                <span class="sr-only">100% Complete (success)</span>
+                            </div>
+                            <span class="progress-completed">70%</span>
+                        </div>
+                        <span class="glyphicon glyphicon-asterisk floatLeft"> &nbsp;</span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <span class="sr-only">100% Complete (success)</span>
+                            </div>
+                            <span class="progress-completed">20%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12" id="contentMain">
+                <div class="col-md-12" id="textWitaj">Walka!</div>
+                <img src="../Content/Images/player-11.png" class="col-md-3 imgs" />
+                <div class="col-md-6" id="inContentMain">
+
+
+                    <div class="col-md-12 col-xs-12 fonts_size_top">(123) Nick1 vs Nick2 (78)</div>
+                    <div class="font20Center">
+                        <div class="col-md-12 col-xs-12 marginBot15">
+                            <div class="col-md-1 col-xs-1">
+                                2
+                            </div>
+                            <div class="col-md-10 col-xs-10">Nick1 wykonuje dwutatakt, Nick2 wykonuje block dwutatktu - Nick1 zdobył 2 punkty po nieudanym bloku Nick2</div>
+                            <div class="col-md-1 col-xs-1">
+                                0
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-xs-12 marginBot15" >
+                            <div class="col-md-1 col-xs-1">
+                                2
+                            </div>
+                            <div class="col-md-10 col-xs-10">Nick2 wykonuje rzut z 4 metrów, Nick1 biegnie przeszkodzic w rzucie - Nick2 nie zdobył punktów niecelny rzut</div>
+                            <div class="col-md-1 col-xs-1">
+                                0
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 marginBot15">
+                            <div class="col-md-1 col-xs-1">
+                                2
+                            </div>
+                            <div class="col-md-10 col-xs-10">Nick1 wykonuje rzut z 3 metrów, Nick2 biegnie przeszkodzic w rzucie - Nick2 dobiegł przeszkodzić w rzucie, Nick2 przejmuje piłkę</div>
+                            <div class="col-md-1 col-xs-1">
+                                0
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-xs-12 marginBot15">
+                            <div class="col-md-1 col-xs-1">
+                                2
+                            </div>
+                            <div class="col-md-10 col-xs-10">Nick2 wykonuje wsad, Nick1 próbuje blokować - Nick2 zdobył 1 punkt, blok Nick1 nieudany</div>
+                            <div class="col-md-1 col-xs-1">
+                                1
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12 col-xs-12 marginBot15" >
+                            <div class="col-md-1 col-xs-1">
+                                2
+                            </div>
+                            <div class="col-md-10 col-xs-10">Nick1 wykonuje rzut z 4 metrów, Nick1 biegnie przeszkodzic w rzucie - Nick1 nie zdobył punktów niecelny rzut</div>
+                            <div class="col-md-1 col-xs-1">
+                                1
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 marginBot15">
+                            <div class="col-md-1 col-xs-1">
+                                2
+                            </div>
+                            <div class="col-md-10 col-xs-10">Nick2 wykonuje rzut z 3 metrów, Nick2 biegnie przeszkodzic w rzucie - Nick1 dobiegł przeszkodzić w rzucie, Nick2 przejmuje piłkę</div>
+                            <div class="col-md-1 col-xs-1">
+                                1
+                            </div>
+                        </div>
+                        
+
+
+                        
+                    </div>
+                    <div id="battleResult" class="col-md-12 col-xs-12">
+                        <div >
+                            Końcowy wynik:
+                        </div>
+                        <div>
+                            2:1
+                        </div>
+                        <div>
+                            Wygrywa Nick1!
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <img src="../Content/Images/player-22.png" class="col-md-3 imgs" />
+
+            </div>
+            <footer class="clearBoth">
+                <nav>
+                    <ul>
+                        <li><a href="">O nas</a></li>
+                        <li><a href="">Kontakt</a></li>
+                        <li><a href="">Wysyłka</a></li>
+                        <li><a href="">Regulamin</a></li>
+                    </ul>
+                </nav>
+                <div id="footer-cd-logo">
+                    <img src="../Content/Images/footer-cd.png" />
+                </div>
+
+                <div id="footer-copyright">
+                    Copyright &copy; 2016 BasketBall
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>

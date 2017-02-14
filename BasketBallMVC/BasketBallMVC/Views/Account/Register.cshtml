@@ -1,0 +1,55 @@
+﻿@model BasketBallMVC.ViewModel.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_StartingPageLayout.cshtml";
+}
+
+<div id="registerSection" style="margin-top:20px">
+    @using (Html.BeginForm("Register", "Account"))
+    {
+        @Html.AntiForgeryToken();
+        
+        <div class="panel" id="registerPanel">
+            <div class="panel-heading">
+                <strong id="PanelText"> Rejestracja </strong>
+            </div>
+            <div class="panel-body">
+                <div class="form-group input-group " style="margin-bottom:0px">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    @Html.TextBoxFor(x => x.Nick, new { placeholder = "Nick", @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(o => o.Nick)
+                <div class="form-group input-group " style="margin-top:15px; margin-bottom:0px">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-tag"></i></span>
+                    @Html.TextBoxFor(x => x.FirstName, new { placeholder = "Imię", @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(o => o.FirstName)
+                <div class="form-group input-group " style="margin-top:15px; margin-bottom:0px">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-tag"></i></span>
+                    @Html.TextBoxFor(x => x.LastName, new { placeholder = "Nazwisko", @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(o => o.LastName)
+                <div class="form-group input-group " style="margin-top:15px; margin-bottom:0px">
+                    <span class="input-group-addon bold">@@</span>
+                    @Html.TextBoxFor(x => x.Email, new { placeholder = "Email", @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(o => o.Email)
+                <div class="form-group input-group " style="margin-top:15px; margin-bottom:0px">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    @Html.PasswordFor(x => x.Password, new { placeholder = "Wprowadź Hasło", @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(o => o.Password)
+                <div class="form-group input-group " style="margin-top:15px;">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    @Html.PasswordFor(x => x.ConfirmPassword, new { placeholder = "Potwierdź Hasło", @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(o => o.ConfirmPassword)
+                <div id="login-error" style="margin-bottom:15px">
+                    @Html.ValidationMessage("registerError")
+                </div>
+                <input type="submit" class="btn btn-orange" value="Zarejestruj" />
+            </div>
+        </div>
+    }
+</div>
+

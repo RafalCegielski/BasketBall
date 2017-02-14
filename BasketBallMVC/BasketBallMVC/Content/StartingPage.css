@@ -1,0 +1,670 @@
+﻿@media screen and (min-width: 1830px) {
+  .footer {
+    background-color: #585858 !important;
+    min-height: 42px !important;
+}
+
+footer #footer-cd-logo {
+    float: right;
+    margin-top: 8px;
+}
+
+footer #footer-copyright {
+    width: 215px;
+    float: right;
+    background-color: #39312E;
+    line-height: 42px;
+    height: 100%;
+    font-size: 14px;
+    color: white;
+    padding-left: 15px;
+}
+
+.btn-orange {
+    color: #fff;
+    font-weight: bold;
+    background-color: #ff6a00;
+    border-color: #ff4600;
+}
+
+    .btn-orange:active, .btn-orange.active {
+        color: #fff;
+        background-color: #e16a05;
+        border-color: #cf4714;
+    }
+
+    .btn-orange:hover {
+        color: #fff;
+        background-color: #ff4600;
+        border-color: #ff6a00;
+    }
+
+#homeLogo {
+    height: 350px;
+    position:absolute;
+    top:65%;
+    left:60%
+}
+
+#main-header-logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+#loginSection {
+    width: 300px;
+    margin-top: 100px;
+    float: left;
+}
+
+#btnRegister {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 13px 25px;
+}
+
+.registerButton :active {
+    position: relative;
+    top: 1px;
+}
+
+
+#panelLogin {
+    text-align: center;
+    background-color: #838181;
+}
+
+#registerPanel {
+    text-align: center;
+    background-color: #838181;
+}
+
+#registerSection {
+    width: 300px;
+    margin-top: 100px;
+    float: left;
+}
+
+#PanelText {
+    color: white;
+    font-size: larger;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    min-height: 800px;
+    width: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI';
+    background-color:white !important 
+}
+}
+
+@media screen and (max-width:1829px) and (min-width:1151px) {
+     .footer {
+    background-color: #585858 !important;
+    min-height: 42px !important;
+}
+
+footer #footer-cd-logo {
+    float: right;
+    margin-top: 8px;
+}
+
+footer #footer-copyright {
+    width: 215px;
+    float: right;
+    background-color: #39312E;
+    line-height: 42px;
+    height: 100%;
+    font-size: 14px;
+    color: white;
+    padding-left: 15px;
+}
+
+.btn-orange {
+    color: #fff;
+    font-weight: bold;
+    background-color: #ff6a00;
+    border-color: #ff4600;
+}
+
+    .btn-orange:active, .btn-orange.active {
+        color: #fff;
+        background-color: #e16a05;
+        border-color: #cf4714;
+    }
+
+    .btn-orange:hover {
+        color: #fff;
+        background-color: #ff4600;
+        border-color: #ff6a00;
+    }
+
+#homeLogo {
+    height: 350px;
+    position:absolute;
+    top:55%;
+    left:60%
+}
+
+#main-header-logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+#loginSection {
+    width: 300px;
+    margin-top: 100px;
+    float: left;
+}
+
+#btnRegister {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 13px 25px;
+}
+
+.registerButton :active {
+    position: relative;
+    top: 1px;
+}
+
+
+#panelLogin {
+    text-align: center;
+    background-color: #838181;
+}
+
+#registerPanel {
+    text-align: center;
+    background-color: #838181;
+}
+
+#registerSection {
+    width: 300px;
+    margin-top: 100px;
+    float: left;
+}
+
+#PanelText {
+    color: white;
+    font-size: larger;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    min-height: 800px;
+    width: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI';
+    background-color:white !important 
+}
+}
+
+@media screen and (max-width:1150px) and (min-width:992px) {
+    .footer {
+    background-color: #585858 !important;
+    min-height: 42px !important;
+}
+
+footer #footer-cd-logo {
+    float: right;
+    margin-top: 8px;
+}
+
+footer #footer-copyright {
+    width: 215px;
+    float: right;
+    background-color: #39312E;
+    line-height: 42px;
+    height: 100%;
+    font-size: 14px;
+    color: white;
+    padding-left: 15px;
+}
+
+.btn-orange {
+    color: #fff;
+    font-weight: bold;
+    background-color: #ff6a00;
+    border-color: #ff4600;
+}
+
+    .btn-orange:active, .btn-orange.active {
+        color: #fff;
+        background-color: #e16a05;
+        border-color: #cf4714;
+    }
+
+    .btn-orange:hover {
+        color: #fff;
+        background-color: #ff4600;
+        border-color: #ff6a00;
+    }
+
+#homeLogo {
+    height: 350px;
+    position:absolute;
+    top:60%;
+    left:60%
+}
+
+#main-header-logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+#loginSection {
+    width: 300px;
+    margin-top: 100px;
+    float: left;
+}
+
+#btnRegister {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 13px 25px;
+}
+
+.registerButton :active {
+    position: relative;
+    top: 1px;
+}
+
+
+#panelLogin {
+    text-align: center;
+    background-color: #838181;
+}
+
+#registerPanel {
+    text-align: center;
+    background-color: #838181;
+}
+
+#registerSection {
+    width: 300px;
+    margin-top: 100px;
+    float: left;
+}
+
+#PanelText {
+    color: white;
+    font-size: larger;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    min-height: 800px;
+    width: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI';
+    background-color:white !important 
+}
+}
+
+@media screen and (max-width:991px) and (min-width:741px) {
+      .footer {
+    background-color: #585858 !important;
+    min-height: 42px !important;
+}
+
+footer #footer-cd-logo {
+    float: right;
+    margin-top: 8px;
+}
+
+footer #footer-copyright {
+    width: 215px;
+    float: right;
+    background-color: #39312E;
+    line-height: 42px;
+    height: 100%;
+    font-size: 14px;
+    color: white;
+    padding-left: 15px;
+}
+
+.btn-orange {
+    color: #fff;
+    font-weight: bold;
+    background-color: #ff6a00;
+    border-color: #ff4600;
+}
+
+    .btn-orange:active, .btn-orange.active {
+        color: #fff;
+        background-color: #e16a05;
+        border-color: #cf4714;
+    }
+
+    .btn-orange:hover {
+        color: #fff;
+        background-color: #ff4600;
+        border-color: #ff6a00;
+    }
+
+#homeLogo {
+    height: 350px;
+    position:absolute;
+    top:60%;
+    left:60%
+}
+
+#main-header-logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+#loginSection {
+    width: 300px;
+    margin-top: 100px;
+    float: left;
+}
+
+#btnRegister {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 13px 25px;
+}
+
+.registerButton :active {
+    position: relative;
+    top: 1px;
+}
+
+
+#panelLogin {
+    text-align: center;
+    background-color: #838181;
+}
+
+#registerPanel {
+    text-align: center;
+    background-color: #838181;
+}
+
+#registerSection {
+    width: 300px;
+    margin-top: 100px;
+    float: left;
+}
+
+#PanelText {
+    color: white;
+    font-size: larger;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    min-height: 800px;
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI';
+    background-color:white !important 
+}
+}
+
+@media screen and (max-width:740px) and (min-width:376px) {
+          .footer {
+    background-color: #585858 !important;
+    min-height: 42px !important;
+}
+
+footer #footer-cd-logo {
+    float: right;
+    margin-top: 8px;
+}
+
+footer #footer-copyright {
+    width: 215px;
+    float: right;
+    background-color: #39312E;
+    line-height: 42px;
+    height: 100%;
+    font-size: 14px;
+    color: white;
+    padding-left: 15px;
+}
+
+.btn-orange {
+    color: #fff;
+    font-weight: bold;
+    background-color: #ff6a00;
+    border-color: #ff4600;
+}
+
+    .btn-orange:active, .btn-orange.active {
+        color: #fff;
+        background-color: #e16a05;
+        border-color: #cf4714;
+    }
+
+    .btn-orange:hover {
+        color: #fff;
+        background-color: #ff4600;
+        border-color: #ff6a00;
+    }
+
+#homeLogo {
+    display:none;
+}
+
+#main-header-logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+#loginSection {
+    width: 300px;
+    margin-top: 50px;
+    float: left;
+}
+
+#btnRegister {
+    display: block;
+    margin-top:30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 13px 25px;
+}
+
+.registerButton :active {
+    position: relative;
+    top: 1px;
+}
+
+
+#panelLogin {
+    text-align: center;
+    background-color: #838181;
+}
+
+#registerPanel {
+    text-align: center;
+    background-color: #838181;
+}
+
+#registerSection {
+    width: 300px;
+    margin-top: 100px;
+    float: left;
+}
+
+#PanelText {
+    color: white;
+    font-size: larger;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    min-height: 650px;
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI';
+    background-color:white !important 
+}
+}
+
+
+@media screen and (max-width:375px) {
+          .footer {
+    background-color: #585858 !important;
+    min-height: 42px !important;
+}
+
+footer #footer-cd-logo {
+    float: right;
+    margin-top: 8px;
+}
+
+footer #footer-copyright {
+    width: 215px;
+    float: right;
+    background-color: #39312E;
+    line-height: 42px;
+    height: 100%;
+    font-size: 14px;
+    color: white;
+    padding-left: 15px;
+}
+
+.btn-orange {
+    color: #fff;
+    font-weight: bold;
+    background-color: #ff6a00;
+    border-color: #ff4600;
+}
+
+    .btn-orange:active, .btn-orange.active {
+        color: #fff;
+        background-color: #e16a05;
+        border-color: #cf4714;
+    }
+
+    .btn-orange:hover {
+        color: #fff;
+        background-color: #ff4600;
+        border-color: #ff6a00;
+    }
+
+#homeLogo {
+    display:none;
+}
+
+#main-header-logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+#loginSection {
+    min-width:220px;
+    width: 100%;
+    margin-top: 50px;
+    float: left;
+}
+
+#btnRegister {
+    display: block;
+    margin-top:30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 13px 25px;
+}
+
+.registerButton :active {
+    position: relative;
+    top: 1px;
+}
+
+
+#panelLogin {
+    text-align: center;
+    background-color: #838181;
+}
+
+#registerPanel {
+    text-align: center;
+    background-color: #838181;
+}
+
+#registerSection {
+    min-width:220px;
+    width: 100%;
+    margin-top: 100px;
+    float: left;
+}
+
+#PanelText {
+    color: white;
+    font-size: larger;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    min-height: 650px;
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI';
+    background-color:white !important 
+}
+}

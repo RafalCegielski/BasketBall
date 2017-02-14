@@ -1,0 +1,24 @@
+﻿.errorsBattle{
+    margin-top:200px; 
+    font-size:40px
+}
+@media screen and (max-width:492px) {
+    .battleDescription {
+        display: none;
+    }
+    #inContentMain{
+        height: 350px;
+    }
+    .rightSum{
+        right:-75%;
+    }
+    #contentMain{
+        min-height:500px
+    }
+    .errorsBattle{
+    margin-top:100px; 
+    font-size:30px
+}
+}
+
+

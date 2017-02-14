@@ -1,0 +1,51 @@
+﻿@model BasketBallMVC.ViewModel.GameStyleViewModel
+@{
+    ViewBag.Title = "GameStyle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12" id="contentMain">
+    <div class="col-md-12" id="textWitaj">Wybierz styl gry!</div>
+    <img src="../Content/Images/player-11.png" class="col-md-3 imgs" />
+    <div class="col-md-6" id="inContentMain">
+
+        <div class="text-center description">
+            Wybierz swój styl gry: pasywny, normalny bądź agresywny który będzie stosowany podczas gry z prawdziwymi rywalami!<br />
+            Styl pasywny zmniejszy szansę na faule ale też zmniejszy szansę na zdobycie punktu<br />
+            Styl normalny to najbardziej zbalansowany styl łączy w sobie średnią stylu pasywnego jak i agresywnago<br />
+            Styl agresywny zwiększa szansę na faule oraz na trafienie
+        </div>
+        <div class="text-center sliderDiv">
+            <input id="slider" type="text" />
+        </div>
+        <button id="applyBtn" class="btn btn-success center-block btn-lg">Zastosuj</button>
+
+    </div>
+    <img src="../Content/Images/player-22.png" class="col-md-3 imgs" />
+
+</div>
+
+
+
+
+@section Styles{
+    @Styles.Render("~/bundles/gameStyle")
+}
+@section ScriptBottom{
+    @Scripts.Render("~/bundles/gameStyleScripts")
+    <script>
+        val = parseInt(@Model.GameStyle)
+        $("#slider").slider({
+
+            ticks_positions: [0, 50, 100],
+            id: "GameStyle",
+            ticks: [0, 50, 100],
+            ticks_snap_bounds: 50,
+            ticks_labels: ['pasywny', 'normalny', 'agresywny'],
+            value: val,
+            min: "1",
+            max: "100",
+            step: "50"
+        });
+    </script>
+}

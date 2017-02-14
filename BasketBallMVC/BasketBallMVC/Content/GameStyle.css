@@ -1,0 +1,119 @@
+﻿
+
+
+
+@media screen and (min-width: 1830px) {
+   #contentMain{
+    min-height:650px
+}
+#inContentMain{
+    height:530px
+}
+
+.description {
+    font-size: 22px;
+    margin-top: 20px;
+}
+#GameStyle {
+        width: 50%;
+    }
+.sliderDiv{
+    margin-top:80px
+}
+#applyBtn{
+    margin-top:110px
+}
+}
+
+@media screen and (max-width:1829px) and (min-width:1151px) {
+  #contentMain{
+    min-height:600px
+}
+#inContentMain{
+    height:490px
+}
+
+.description {
+    font-size: 18px;
+    margin-top: 20px;
+}
+#GameStyle {
+        width: 50%;
+    }
+.sliderDiv{
+    margin-top:80px
+}
+#applyBtn{
+    margin-top:100px
+}
+}
+
+@media screen and (max-width:1150px) and (min-width:992px) {
+     #contentMain{
+    min-height:600px
+}
+#inContentMain{
+    height:490px
+}
+
+.description {
+    font-size: 16px;
+    margin-top: 20px;
+}
+#GameStyle {
+        width: 50%;
+    }
+.sliderDiv{
+    margin-top:80px
+}
+#applyBtn{
+    margin-top:100px
+} 
+}
+
+@media screen and (max-width:991px) and (min-width:741px) {
+  #contentMain{
+    min-height:700px
+}
+#inContentMain{
+    height:500px
+}
+
+.description {
+    font-size: 22px;
+    margin-top: 20px;
+}
+#GameStyle {
+        width: 50%;
+    }
+.sliderDiv{
+    margin-top:80px
+}
+#applyBtn{
+    margin-top:100px
+}
+}
+
+@media screen and (max-width:740px) {
+ #contentMain{
+    min-height:700px
+}
+#inContentMain{
+    height:500px
+}
+
+.description {
+    font-size: 15px;
+    padding-top: 15px;
+}
+#GameStyle {
+        width: 50%;
+         font-size: 10px;
+    }
+.sliderDiv{
+    margin-top:30px
+}
+#applyBtn{
+    margin-top:70px
+}
+}

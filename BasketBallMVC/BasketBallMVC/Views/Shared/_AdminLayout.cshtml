@@ -1,0 +1,60 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profil</title>
+    @Styles.Render("~/bundles/Layout")
+    @RenderSection("Styles", false)
+
+    <meta charset="utf-8" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse sidebar" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @using (Html.BeginForm("Logoff", "Account", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <button class="navbar-brand logoffBtn">Wyloguj</button>
+                }
+            </div>
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("Home", "Home")">Strona startowa<span class="menuFont pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+                    <li><a href="@Url.Action("Users", "Admin")">Użytkownicy<span class="pull-right hidden-xs showopacity glyphicon glyphicon-user menuFont"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <!--moje-->
+
+        <div>
+            @RenderBody()
+        </div>
+
+        <footer class="navbar-fixed-bottom footer">
+            
+            <div id="footer-cd-logo">
+                <img src="~/Content/Images/footer-cd.png" />
+            </div>
+
+            <div id="footer-copyright">
+                Copyright &copy; 2016 BasketBall
+            </div>
+        </footer>
+    </div>
+    @Scripts.Render("~/Scripts/LayoutScripts")
+    <script src="~/signalr/hubs"></script>
+    @RenderSection("ScriptBottom", required: false)
+</body>
+</html>

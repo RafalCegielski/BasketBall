@@ -1,0 +1,85 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model BasketBallMVC.ViewModel.RankingViewModel
+@{
+    ViewBag.Title = "Ranking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12" id="contentMain">
+    <div class="col-md-12" id="textWitaj">Ranking!</div>
+    <img src="../Content/Images/player-11.png" class="col-md-3 imgs" />
+    <div class="col-md-6" id="inContentMainFriends" style="position:relative">
+
+
+        @if (Model.CharacterForRankingPaged != null && Model.CharacterForRankingPaged.Count > 0)
+        {
+
+            using (Html.BeginForm("Ranking", "Character"))
+            {
+                <div id="custom-search-input">
+                    <div class="input-group col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+                        <input type="text" name="searchString" class="search-query form-control" placeholder="Search" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            }
+
+            <div id="font20">
+                @foreach (var item in Model.CharacterForRankingPaged)
+                {
+                    <div id="friendsCont">
+                        <div class="col-md-1 col-xs-1 rankingFontSize">
+                            @item.PositionInRanking
+                        </div>
+                        <div class="col-md-2 col-xs-2 rankingFontSize">
+                            @item.TotalPoints
+                        </div>
+                        <div class="col-md-4 col-xs-4 rankingFontSize">
+                            @item.Nick
+                        </div>
+                        <div class="col-md-1 col-xs-2">
+                            @if (Model.Name != item.Nick && item.isAvalibleToBattle)
+                            {
+                                using (Html.BeginForm("VsSelectedPlayer", "Game", new { oponentNick = item.Nick }))
+                                {
+                                    <button type="submit" id="battleVs_@item.Nick" class="btn btn-danger rankingsBtnsSize glyphicon glyphicon-knight rankingFontSize"></button>
+                                }
+                            }
+
+                        </div>
+                        @if (Model.Name != item.Nick)
+                        {
+                            <div class="col-md-1 col-xs-2">
+                                <button type="button" name="BtnNewMessage" id="messageTo_@item.Nick" class="btn btn-success rankingsBtnsSize glyphicon glyphicon-envelope rankingFontSize"></button>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+            <div style="text-align:center; position:absolute; bottom:0; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
+                @Html.PagedListPager(Model.CharacterForRankingPaged, page => Url.Action("Ranking", new { page }), PagedListRenderOptions.ClassicPlusFirstAndLast)
+            </div>
+
+        }
+
+
+    </div>
+    <img src="../Content/Images/player-22.png" class="col-md-3 imgs" />
+
+</div>
+@section Styles {
+    <link href="~/Content/Ranking.css" rel="stylesheet" />
+}
+
+@section ScriptBottom {
+    <script src="~/Scripts/message_script.js"></script>
+}
+
+
+
+

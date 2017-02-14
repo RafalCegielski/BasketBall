@@ -1,0 +1,189 @@
+﻿@model BasketBallMVC.ViewModel.LayoutViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    @Styles.Render("~/bundles/Layout")
+    @RenderSection("Styles", false)
+
+    <meta charset="utf-8" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse sidebar" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @using (Html.BeginForm("Logoff", "Account", FormMethod.Post))
+                {
+                    <button class="navbar-brand logoffBtn">Wyloguj</button>
+                }
+            </div>
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("Home", "Home")">Strona startowa<span class="menuFont pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+                    <li><a id="Messages" href="@Url.Action("MessageList", "Messages")">Wiadomości<span class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope menuFont"></span></a></li>
+                    <li><a href="@Url.Action("TrainingRoom", "Trening")">Sala Treningowa<span class="pull-right hidden-xs showopacity glyphicon glyphicon-scale menuFont"></span></a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle menuFont" data-toggle="dropdown">Gracze<span class="caret"></span><span class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                            <li><a href="@Url.Action("Ranking", "Character")">Ranking</a></li>
+                            <li class="divider"></li>
+                            <li><a href="@Url.Action("FriendsList", "Character")">Znajomi</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle menuFont" data-toggle="dropdown">Mecz <span class="caret"></span><span class="pull-right hidden-xs showopacity glyphicon glyphicon-flag"></span></a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                            <li><a href="@Url.Action("VsRandomPlayer", "Game")">Losowy przeciwnik</a></li>
+                            <li class="divider"></li>
+                            <li><a href="@Url.Action("VsComputer", "Game")">Gracz-komputer</a></li>
+                            <li class="divider"></li>
+                            <li><a href="@Url.Action("GameSettings", "Game")">Ustawienia meczu</a></li>
+                            <li class="divider"></li>
+                            <li><a href="@Url.Action("GameStyle", "Game")">Styl gry</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle menuFont" data-toggle="dropdown">Miasto <span class="caret"></span><span class="pull-right hidden-xs showopacity glyphicon glyphicon-tower"></span></a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                            <li><a href="@Url.Action("Shop", "City")">Sklep</a></li>
+                            <li class="divider"></li>
+                            <li><a href="@Url.Action("Restaurant", "City")">Restauracja</a></li>
+                        </ul>
+                    </li>
+                    <li><a id="Notifications" href="@Url.Action("NotificationList", "Notifications")">Powiadomienia<span class="pull-right hidden-xs showopacity glyphicon glyphicon-info-sign menuFont"></span></a></li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li><a id="Notifications" href="@Url.Action("Users", "Admin")">Administracja<span class="pull-right hidden-xs showopacity glyphicon glyphicon-cog menuFont"></span></a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="row">
+            <div class="col-md-12" id="topBar">
+                <br />
+                <div id="topBarStats" class="col-md-3 col-xs-12">
+                    <p class="col-md-12" id="mainTextTopBar">@Model.Name</p>
+                    <p class="col-md-6 stats_main">Gold: @Model.Gold</p>
+                    <p class="col-md-6 stats_main">Level: @Model.Level</p>
+                    <p class="col-md-12 stats_main" style="text-align:center"> <div id="countdown"></div></p>
+                </div>
+                <div class="container col-md-9 col-xs-12 marginTop20">
+                    <div class="row">
+                        <span class="glyphicon glyphicon-heart floatLeft"> &nbsp;</span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: @Model.HealthInPercent%">
+                                <span class="sr-only">100% Complete (success)</span>
+                            </div>
+                            <span class="progress-completed">@Model.HealthInPercent%</span>
+                        </div>
+                        <span class="glyphicon glyphicon-adjust floatLeft"> &nbsp;</span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: @Model.EnergyInPercent%">
+                                <span class="sr-only">100% Complete (success)</span>
+                            </div>
+                            <span class="progress-completed">@Model.EnergyInPercent%</span>
+                        </div>
+                        <span class="glyphicon glyphicon-asterisk floatLeft"> &nbsp;</span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: @Model.LevelInPercent%">
+                                <span class="sr-only">100% Complete (success)</span>
+                            </div>
+                            <span class="progress-completed">@Model.LevelInPercent%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+
+        <footer class="navbar-fixed-bottom footer">
+            <div id="footer-cd-logo">
+                <img src=@Url.Content("~/Content/Images/footer-cd.png") />
+            </div>
+            <div id="footer-copyright">
+                Copyright &copy; 2016 BasketBall
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/Scripts/LayoutScripts")
+    <script src="~/signalr/hubs"></script>
+    @RenderSection("ScriptBottom", required: false)
+
+    <script>
+        var messageFlag = false;
+        var notifyFlag = false;
+
+        function flash(id, color, time, color2, time2) {
+            document.getElementById(id).style.color = color;
+            if (id == "Notifications") {
+                notifi = setTimeout('flash("' + id + '","' + color2 + '",' + time2 + ',"' + color + '",' + time + ')', time);
+            } else if (id == "Messages") {
+                message = setTimeout('flash("' + id + '","' + color2 + '",' + time2 + ',"' + color + '",' + time + ')', time);
+            }
+        }
+
+        $(function () {
+            var notificationHub = $.connection.notificationHub;
+            $.connection.hub.start().done(function () { });
+
+            notificationHub.client.message = function () {
+                if (!messageFlag) {
+                    flash("Messages", "red", 500, "#9d9d9d", 500);
+                    messageFlag = true;
+                }
+            }
+
+
+            notificationHub.client.notify = function () {
+                if (!notifyFlag) {
+                    flash("Notifications", "red", 500, "#9d9d9d", 500);
+                    notifyFlag = true;
+                }
+
+            }
+            notificationHub.client.message = function () {
+                if (!messageFlag) {
+                    flash("Messages", "red", 500, "#9d9d9d", 500);
+                    messageFlag = true;
+                }
+            }
+            notificationHub.client.logout = function () {
+                bootbox.alert("Zostałeś zabokowany przez administratora!");
+                $.post('/Account/Logoff');
+            }
+
+            @{if (Model.Notifications == true)
+                {
+                   @: flash("Notifications", "red", 500, "#9d9d9d", 500);
+                               @:notifyFlag = true;
+                            }
+            }
+            @{if (Model.Messages == true)
+            {
+                @: flash("Messages", "red", 500, "#9d9d9d", 500);
+                            @:messageFlag = true;
+                        }
+            }
+        })
+
+    </script>
+
+</body>
+</html>

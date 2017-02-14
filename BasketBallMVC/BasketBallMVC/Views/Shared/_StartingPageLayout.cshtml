@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    @Styles.Render("~/bundles/startingPage")
+</head>
+<body class="center row" >
+    <div class="col-xs-12">
+        <header>
+            <img src="../Content/Images/Banner.png" class="center" style="max-width:100%" />
+        </header>
+
+        <div class="col-xs-12">
+            @RenderBody()
+        </div>
+
+        <img id="homeLogo" src="../Content/Images/HomeLogo.png" />
+
+        <footer class="navbar-fixed-bottom footer">
+            <div id="footer-cd-logo">
+                <img src="../Content/Images/footer-cd.png" />
+            </div>
+            <div id="footer-copyright">
+                Copyright &copy; 2016 BasketBall
+            </div>
+        </footer>
+    </div>
+
+    @RenderSection("ScriptBottomStartingPage", required: false)
+</body>
+</html>

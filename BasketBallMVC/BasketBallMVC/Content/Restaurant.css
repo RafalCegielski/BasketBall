@@ -1,0 +1,380 @@
+﻿@media screen and (min-width: 1830px) {
+    #restaurantAbilities {
+        background-color: #ff8f24;
+        height: 185px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 130px;
+    }
+
+    .restaurantFirstStepBtnFirst {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .restaurantFirstStepBtn {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    #contentMain {
+        min-height: 550px;
+    }
+
+    .restaurantArrow {
+        margin-top: 170px;
+    }
+
+    #restaurntAbilitiesSecond {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 100px;
+        height: 250px;
+    }
+
+    .restaurantSecondStepFirst {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .restaurantSecondStep {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    #restaurantAbilitiesThird {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 40px;
+        height: 380px;
+    }
+
+    .restaurantProgresFirst {
+        margin-left: 45px;
+    }
+
+    .restaurantFirstContainer {
+        margin-top: 50px;
+    }
+
+    .restaurantH1 {
+        margin-top: 70px;
+    }
+
+    .restaurantBtnBuy {
+        margin-top: 68px;
+    }
+}
+
+@media screen and (max-width:1829px) and (min-width:1151px) {
+    #restaurantAbilities {
+        background-color: #ff8f24;
+        height: 185px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 130px;
+    }
+
+    .restaurantFirstStepBtnFirst {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .restaurantFirstStepBtn {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    #contentMain {
+        min-height: 550px;
+    }
+
+    .restaurantArrow {
+        margin-top: 170px;
+    }
+
+    #restaurntAbilitiesSecond {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 100px;
+        height: 250px;
+    }
+
+    .restaurantSecondStepFirst {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .restaurantSecondStep {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    #restaurantAbilitiesThird {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 40px;
+        height: 380px;
+    }
+
+    .restaurantProgresFirst {
+        margin-left: 10px;
+        margin-right: 0;
+        width: 45px;
+    }
+
+    .restaurantProgresSecond {
+        margin-left: 30px;
+        margin-right: 0;
+        width: 45px;
+    }
+
+    .restaurantFirstContainer {
+        margin-top: 50px;
+    }
+
+    .restaurantH1 {
+        margin-top: 70px;
+    }
+
+    .restaurantBtnBuy {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width:1150px) and (min-width:992px) {
+    #restaurantAbilities {
+        background-color: #ff8f24;
+        height: 185px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 130px;
+    }
+
+    .restaurantFirstStepBtnFirst {
+        margin-top: 30px;
+        font-size: 28px;
+    }
+
+    .restaurantFirstStepBtn {
+        margin-top: 10px;
+        font-size: 28px;
+    }
+
+    #contentMain {
+        min-height: 550px;
+    }
+
+    .restaurantArrow {
+        margin-top: 170px;
+    }
+
+    #restaurntAbilitiesSecond {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 100px;
+        height: 250px;
+    }
+
+    .restaurantSecondStepFirst {
+        margin-top: 30px;
+        font-size: 28px;
+    }
+
+    .restaurantSecondStep {
+        margin-top: 10px;
+        font-size: 28px;
+    }
+
+    #restaurantAbilitiesThird {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 40px;
+        height: 380px;
+    }
+
+    .restaurantProgresFirst {
+        margin-left: 5px;
+        margin-right: 0;
+        width: 45px;
+    }
+
+    .restaurantProgresSecond {
+        margin-left: 15px;
+        margin-right: 0;
+        width: 45px;
+    }
+
+    .restaurantFirstContainer {
+        margin-top: 50px;
+    }
+
+    .restaurantH1 {
+        margin-top: 70px;
+    }
+
+    .restaurantBtnBuy {
+        margin-top: 30px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:991px) and (min-width:741px) {
+    #restaurantAbilities {
+        background-color: #ff8f24;
+        height: 110px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 20px;
+    }
+
+    .restaurantFirstStepBtnFirst {
+        margin-top: 30px;
+        font-size: 28px;
+    }
+
+    .restaurantFirstStepBtn {
+        margin-top: 30px;
+        font-size: 28px;
+    }
+
+    #contentMain {
+        min-height: 850px;
+    }
+
+    .restaurantArrow {
+        display: none;
+    }
+
+    #restaurntAbilitiesSecond {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 40px;
+        height: 110px;
+    }
+
+    .restaurantSecondStepFirst {
+        margin-top: 30px;
+        font-size: 28px;
+    }
+
+    .restaurantSecondStep {
+        margin-top: 30px;
+        font-size: 28px;
+    }
+
+    #restaurantAbilitiesThird {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 40px;
+        height: 380px;
+    }
+
+    .restaurantProgresFirst {
+        margin-left: 25px;
+        margin-right: 0;
+        width: 45px;
+    }
+
+    .restaurantProgresSecond {
+        margin-left: 60px;
+        margin-right: 0;
+        width: 45px;
+    }
+
+    .restaurantFirstContainer {
+        margin-top: 50px;
+    }
+
+    .restaurantH1 {
+        margin-top: 70px;
+    }
+
+    .restaurantBtnBuy {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width:740px) {
+    #restaurantAbilities {
+        background-color: #ff8f24;
+        height: 110px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 20px;
+    }
+
+    .restaurantFirstStepBtnFirst {
+        margin-top: 30px;
+        font-size: 28px;
+    }
+
+    .restaurantFirstStepBtn {
+        margin-top: 30px;
+        font-size: 28px;
+    }
+
+    #contentMain {
+        min-height: 600px;
+    }
+
+    .restaurantArrow {
+        display: none;
+    }
+
+    #restaurntAbilitiesSecond {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 20px;
+        height: 90px;
+    }
+
+    .restaurantSecondStepFirst {
+        margin-top: 30px;
+        font-size: 10px;
+    }
+
+    .restaurantSecondStep {
+        margin-top: 30px;
+        font-size: 10px;
+    }
+
+    #restaurantAbilitiesThird {
+        background-color: #ff8f24;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 20px;
+        height: 200px;
+    }
+
+    .restaurantProgresFirst {
+        display: none;
+    }
+
+    .restaurantProgresSecond {
+        display: none;
+    }
+
+    .restaurantFirstContainer {
+        margin-left:0px
+    }
+    .restaurantSecondContainer {
+        margin-left:50px
+    }
+
+    .restaurantH1 {
+    }
+
+    .restaurantBtnBuy {
+        font-size:8px
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 10px;
+    }
+}

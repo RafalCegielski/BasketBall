@@ -1,0 +1,416 @@
+﻿@media screen and (min-width: 1830px) {
+    #shopAbilities {
+        background-color: #ff8f24;
+        height: 320px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 140px;
+    }
+
+    .shopFirstStep {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .shopFirstStepNext {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .arowShop {
+        margin-top: 245px;
+    }
+
+    .shopSecondStep {
+        background-color: #ff8f24;
+        height: 320px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 140px;
+    }
+
+    .shopSecondStepBtnFirst {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .shopSecondStepBtn {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .shopThirdStep {
+        background-color: #ff8f24;
+        height: 320px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 140px;
+    }
+
+    .selectedFirstBtn {
+        margin-top: 30px;
+        background-color: #ff6a00;
+    }
+
+    .unselectedFirstBtn {
+        margin-top: 30px;
+    }
+
+    .selectedBtn {
+        margin-top: 10px;
+        background-color: #ff6a00;
+    }
+
+    .unselectedBtn {
+        margin-top: 10px;
+    }
+
+    .btnThirdStep {
+        font-size: 30px;
+    }
+
+    .shopTextThirdStep {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .shopSaleBtn {
+        font-size: 20px;
+        line-height: 2.2;
+    }
+
+    #contentMain {
+        min-height: 750px;
+    }
+}
+
+@media screen and (max-width:1829px) and (min-width:1151px) {
+    #shopAbilities {
+        background-color: #ff8f24;
+        height: 320px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 10px;
+    }
+
+    .shopFirstStep {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .shopFirstStepNext {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .arowShop {
+        margin-top: 138px;
+    }
+
+    .shopSecondStep {
+        background-color: #ff8f24;
+        height: 320px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 10px;
+    }
+
+    .shopSecondStepBtnFirst {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .shopSecondStepBtn {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .shopThirdStep {
+        background-color: #ff8f24;
+        height: 320px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 10px;
+    }
+
+    .selectedFirstBtn {
+        margin-top: 30px;
+        background-color: #ff6a00;
+    }
+
+    .unselectedFirstBtn {
+        margin-top: 30px;
+    }
+
+    .selectedBtn {
+        margin-top: 10px;
+        background-color: #ff6a00;
+    }
+
+    .unselectedBtn {
+        margin-top: 10px;
+    }
+
+    .btnThirdStep {
+        font-size: 18px;
+    }
+
+    .shopTextThirdStep {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .shopSaleBtn {
+        font-size: 20px;
+        line-height: 2.2;
+    }
+
+    #contentMain {
+        min-height: 450px;
+    }
+}
+
+@media screen and (max-width:1150px) and (min-width:992px) {
+    #shopAbilities {
+        background-color: #ff8f24;
+        height: 260px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 10px;
+    }
+
+    .shopFirstStep {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .shopFirstStepNext {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .arowShop {
+        margin-top: 116px;
+    }
+
+    .shopSecondStep {
+        background-color: #ff8f24;
+        height: 260px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 10px;
+    }
+
+    .shopSecondStepBtnFirst {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .shopSecondStepBtn {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .shopThirdStep {
+        background-color: #ff8f24;
+        height: 260px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 10px;
+    }
+
+    .selectedFirstBtn {
+        margin-top: 30px;
+        background-color: #ff6a00;
+    }
+
+    .unselectedFirstBtn {
+        margin-top: 30px;
+    }
+
+    .selectedBtn {
+        margin-top: 10px;
+        background-color: #ff6a00;
+    }
+
+    .unselectedBtn {
+        margin-top: 10px;
+    }
+
+    .btnThirdStep {
+        font-size: 14px;
+    }
+
+    .shopTextThirdStep {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .shopSaleBtn {
+        font-size: 20px;
+        line-height: 2.2;
+    }
+
+    #contentMain {
+        min-height: 400px;
+    }
+}
+
+@media screen and (max-width:991px) and (min-width:741px) {
+    #shopAbilities {
+        background-color: #ff8f24;
+        height: 110px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 10px;
+    }
+
+    .shopFirstStep {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .shopFirstStepNext {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .arowShop {
+        display:none;
+    }
+
+    .shopSecondStep {
+
+        background-color: #ff8f24;
+        height: 110px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 40px;
+    }
+
+    .shopSecondStepBtnFirst {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .shopSecondStepBtn {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .shopThirdStep {
+        background-color: #ff8f24;
+        height: 220px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 40px;
+    }
+
+    .selectedFirstBtn {
+        margin-top: 30px;
+        background-color: #ff6a00;
+    }
+
+    .unselectedFirstBtn {
+        margin-top: 30px;
+    }
+
+    .selectedBtn {
+        margin-top: 10px;
+        background-color: #ff6a00;
+    }
+
+    .unselectedBtn {
+        margin-top: 10px;
+    }
+
+    .btnThirdStep {
+        font-size: 14px;
+    }
+
+    .shopTextThirdStep {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .shopSaleBtn {
+        font-size: 20px;
+        line-height: 2.2;
+    }
+
+    #contentMain {
+        min-height: 700px;
+    }
+}
+
+@media screen and (max-width:740px) {
+     #shopAbilities {
+        background-color: #ff8f24;
+        height: 90px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 10px;
+    }
+
+    .shopFirstStep {
+        margin-top: 30px;
+        font-size: 10px;
+    }
+
+    .shopFirstStepNext {
+        margin-top: 30px;
+        font-size: 10px;
+    }
+
+    .arowShop {
+        display:none;
+    }
+
+    .shopSecondStep {
+
+        background-color: #ff8f24;
+        height: 90px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 20px;
+    }
+
+    .shopSecondStepBtnFirst {
+        margin-top: 30px;
+        font-size: 10px;
+    }
+
+    .shopSecondStepBtn {
+        margin-top: 30px;
+        font-size: 10px;
+    }
+
+    .shopThirdStep {
+        background-color: #ff8f24;
+        height: 185px;
+        border-radius: 50px 50px 50px 50px;
+        margin-top: 20px;
+    }
+
+    .selectedFirstBtn {
+        margin-top: 30px;
+        background-color: #ff6a00;
+    }
+
+    .unselectedFirstBtn {
+        margin-top: 20px;
+    }
+
+    .selectedBtn {
+        margin-top: 10px;
+        background-color: #ff6a00;
+    }
+
+    .unselectedBtn {
+        margin-top: 10px;
+    }
+
+    .btnThirdStep {
+        font-size: 10px;
+    }
+
+    .shopTextThirdStep {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .shopSaleBtn {
+        font-size: 20px;
+        line-height: 2.2;
+    }
+
+    #contentMain {
+        min-height: 550px;
+    }
+}

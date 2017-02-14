@@ -1,0 +1,39 @@
+﻿@model BasketBallMVC.ViewModel.ShopViewModel
+@{
+    ViewBag.Title = "Shop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12" id="contentMain">
+    <div id="shopFirstStep">
+        <div class="col-md-12 col-xs-12" id="textWitaj">Sklep!</div>
+        <div class="col-md-2 col-xs-12" id="shopAbilities">
+            @{
+                bool flag = false;
+            }
+            @foreach (var item in Model.NameOfCategory)
+            {
+                if (!flag)
+                {
+                    <button id="CategoryButton_@item" name="CategoryButton" type="button" class="btn btn-orange col-md-12 col-xs-3 shopFirstStep">@item</button>
+                    flag = true;
+                }
+                else
+                {
+                    <button id="CategoryButton_@item" name="CategoryButton" type="button" class="btn btn-orange col-md-12 col-xs-3 shopFirstStepNext">@item</button>
+                }
+
+            }
+        </div>
+    </div>
+
+    <div id="shopSecondStep"></div>
+    <div id="shopThirdStep"></div>
+</div>
+
+@section ScriptBottom{
+    @Scripts.Render("~/bundles/Scripts")
+}
+@section Styles {
+    @Styles.Render("~/bundles/shop")
+}

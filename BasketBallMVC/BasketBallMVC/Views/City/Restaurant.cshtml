@@ -1,0 +1,135 @@
+﻿@model BasketBallMVC.ViewModel.RestaurantViewModel
+@{
+    ViewBag.Title = "Restaurant";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12" id="contentMain">
+    <div id="restaurantFirstStep">
+        <div class="col-md-12 col-xs-12" id="textWitaj">Restauracja!</div>
+        <div class="col-md-2 col-xs-12" id="restaurantAbilities">
+
+            <button id="CategoryButton_Energy" data-type="Energy" name="CategoryButton" type="button" class="btn btn-orange col-md-12 col-xs-6 restaurantFirstStepBtnFirst">Energia</button>
+            <button id="CategoryButton_Health" data-type="Health" name="CategoryButton" type="button" class="btn btn-orange col-md-12 col-xs-6 restaurantFirstStepBtn">Życie</button>
+
+        </div>
+    </div>
+
+    <div id="restaurantSecondStep"></div>
+    <div id="restaurantThirdStep"></div>
+</div>
+
+@section ScriptBottom{
+    @Scripts.Render("~/bundles/restaurantScripts")
+    <script>
+        $(document).ready(function () {
+          $(document).on('click', '[name="DeviceCategoryButton"]', function () {
+                btn = $(this);
+                splitedId = btn.attr("id").split("_");
+                isAvalible = "";
+                cost = "";
+                if (splitedId[1] == "Small") {
+                    var size = 20;
+                    isAvalible = "@Model.isSmallAvailible";
+                    cost = "@Model.SmallCost";
+                } else if (splitedId[1] == "Medium") {
+                    var size = 60;
+                    isAvalible = "@Model.isMediumAvailible";
+                    cost = "@Model.MediumCost";
+                } else if (splitedId[1] == "Big") {
+                    var size = 100;
+                    isAvalible = "@Model.isBigAvailible";
+                    cost = "@Model.BigCost";
+                }
+
+                if (splitedId[2] == "Health") {
+                    valueInPts = parseInt(@Model.MaxHealth) * (size / 100);
+                    healthInPercentAfter = parseInt(@Model.HealthInPercent) + size;
+                    if (healthInPercentAfter > 100)
+                        healthInPercentAfter = 100;
+                    healthAfter = parseInt(@Model.Health) + valueInPts;
+                    if (healthAfter > parseInt(@Model.MaxHealth))
+                        healthAfter = parseInt(@Model.MaxHealth);
+                    htmlToAppend = "<img class=\"col-md-1 restaurantArrow\" src=\"../Content/Images/arrow.png\"/> " +
+                                                            "<div class=\"col-md-5 col-xs-12\" id=\"restaurantAbilitiesThird\">" +
+                                                            "<div class=\"progress progress-bar-vertical restaurantProgresFirst\">" +
+                                                               "<div class=\"progress-bar progress-bar-danger\" role=\"progressbar\" aria-valuenow=\"" +@Model.HealthInPercent +"\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"height: " +@Model.HealthInPercent +"%;\">" +
+                                                                   "<span class=\"sr-only\">" +@Model.HealthInPercent +"% Complete</span>" +
+                                                               "</div>" +
+                                                           "</div>" +
+                                                            "<div class=\"col-md-4 col-xs-4 restaurantFirstContainer\">" +
+                                                               "<h1 class='restaurantH1'> Aktualnie </h1>" +
+                                                               "<h4>Wartość w pkt: " + @Model.Health + " </h4>" +
+                                                               "<h4>Wartość w %: " + @Model.HealthInPercent + "% </h4>" +
+                                                               "</div>" +
+                                                               "<div class=\"progress progress-bar-vertical restaurantProgresSecond\">" +
+                                                               "<div class=\"progress-bar progress-bar-danger\" role=\"progressbar\" aria-valuenow=\"" + healthInPercentAfter + "\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"height: " + healthInPercentAfter + "%;\">" +
+                                                                   "<span class=\"sr-only\">" + healthInPercentAfter + "% Complete</span>" +
+                                                               "</div>" +
+                                                           "</div>" +
+                                                            "<div class=\"col-md-4 col-xs-4 restaurantFirstContainer restaurantSecondContainer\">" +
+                                                               "<h1 class='restaurantH1'> Po </h1>" +
+                                                               "<h4>Wartość w pkt: " + healthAfter + " </h4>" +
+                                                               "<h4>Wartość w %: " + healthInPercentAfter + "% </h4>" +
+                                                               "<h4>Cena: " + cost + " </h4>";
+
+
+                    if (isAvalible == "True") {
+                        htmlToAppend += "<button data-size=\"" + size + "\" id=\"HealthBuyBtn\" name = 'restaurantBtn' class=\"btn btn-success col-md-10 col-xs-10 restaurantBtnBuy\">Kup</button> </div>";
+                    }
+                    else {
+                        htmlToAppend += "<button disabled data-size=\"" + size + "\" id=\"HealthBuyBtn\" name = 'restaurantBtn' class=\"btn btn-success col-md-10 col-xs-10 restaurantBtnBuy\">Kup</button> </div>";
+                    }
+
+
+                } else {
+                    valueInPts = parseInt(@Model.MaxEnergy) * (size / 100);
+                    energyInPercentAfter = parseInt(@Model.EnergyInPercent) + size;
+                    if (energyInPercentAfter > 100)
+                        energyInPercentAfter = 100;
+                    energyAfter = parseInt(@Model.Energy) + valueInPts;
+                    if (energyAfter > parseInt(@Model.MaxEnergy))
+                        energyAfter = parseInt(@Model.MaxEnergy);
+                    htmlToAppend = "<img class=\"col-md-1 restaurantArrow\" src=\"../Content/Images/arrow.png\" /> " +
+                                                            "<div class=\"col-md-5 col-xs-12 \" id=\"restaurantAbilitiesThird\">" +
+                                                            "<div class=\"progress progress-bar-vertical restaurantProgresFirst\">" +
+                                                               "<div class=\"progress-bar progress-bar-info\" role=\"progressbar\" aria-valuenow=\"" +@Model.EnergyInPercent +"\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"height: " +@Model.EnergyInPercent +"%;\">" +
+                                                                   "<span class=\"sr-only\">" +@Model.EnergyInPercent +"% Complete</span>" +
+                                                               "</div>" +
+                                                           "</div>" +
+                                                            "<div class=\"col-md-4 col-xs-4 restaurantFirstContainer\">" +
+                                                               "<h1 class='restaurantH1'> Aktualnie </h1>" +
+                                                               "<h4>Wartość w pkt: " + @Model.Energy + " </h4>" +
+                                                               "<h4>Wartość w %: " + @Model.EnergyInPercent + "% </h4>" +
+                                                               "</div>" +
+                                                               "<div class=\"progress progress-bar-vertical restaurantProgresSecond\">" +
+                                                               "<div class=\"progress-bar progress-bar-info\" role=\"progressbar\" aria-valuenow=\"" + energyInPercentAfter + "\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"height: " + energyInPercentAfter + "%;\">" +
+                                                                   "<span class=\"sr-only\">" + energyInPercentAfter + "% Complete</span>" +
+                                                               "</div>" +
+                                                           "</div>" +
+                                                            "<div class=\"col-md-4 col-xs-4 restaurantFirstContainer restaurantSecondContainer\">" +
+                                                               "<h1 class='restaurantH1'> Po </h1>" +
+                                                               "<h4>Wartość w pkt: " + energyAfter + " </h4>" +
+                                                               "<h4>Wartość w %: " + energyInPercentAfter + "% </h4>" +
+                                                               "<h4>Cena: " + cost + " </h4>";
+
+                    if (isAvalible == "True") {
+                        htmlToAppend += "<button data-size=\"" + size + "\" id=\"EnergyBuyBtn\" name = 'restaurantBtn' class=\"btn btn-success col-md-10 col-xs-10 restaurantBtnBuy\">Kup</button></div>";
+                    }
+                    else {
+                        htmlToAppend += "<button disabled data-size=\"" + size + "\" id=\"EnergyBuyBtn\" name = 'restaurantBtn' class=\"btn btn-success col-md-10 col-xs-10 restaurantBtnBuy\">Kup</button></div>";
+                    }
+                }
+                $("#restaurantThirdStep").html(htmlToAppend);
+            });
+        });
+    </script>
+}
+@section Styles {
+    @Styles.Render("~/bundles/restaurant")
+}
+
+
+
+
+

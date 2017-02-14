@@ -1,0 +1,48 @@
+﻿@model BasketBallMVC.ViewModel.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_StartingPageLayout.cshtml";
+}
+
+@using (Html.BeginForm("Register", "Account",FormMethod.Get))
+{
+    <button class="btn btn-orange" id="btnRegister">
+        Zarejestruj się za darmo
+    </button>
+}
+
+
+<div id="loginSection">
+    <div class="panel" id="panelLogin">
+        <div class="panel-heading">
+            <strong id="PanelText"> Logowanie </strong>
+        </div>
+        @using (Html.BeginForm("Login", "Account"))
+        {
+            @Html.AntiForgeryToken()
+            <div id="login-error">
+                @Html.ValidationMessage("loginerror")
+            </div>
+
+
+            <div class="panel-body">
+                <div class="form-group input-group " style="margin-bottom:0px">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    @Html.TextBoxFor(x => x.Email, new { placeholder = "Email", @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(o => o.Email)
+
+                <div class="form-group input-group " style="margin-top:15px; margin-bottom:0px">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    @Html.PasswordFor(x => x.Password, new { placeholder = "Hasło", @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(o => o.Password)
+
+                <div class="checkbox">
+                    <label>@Html.CheckBoxFor(x => x.RememberMe) Zapamiętaj mnie</label>
+                </div>
+                <input type="submit" class="btn btn-orange" value="Zaloguj" />
+            </div>
+        }
+    </div>
+</div>
