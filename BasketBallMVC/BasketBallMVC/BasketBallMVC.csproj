@@ -189,6 +189,10 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Infrastructure\Enums.cs" />
+    <Compile Include="Migrations\201702141931574_BasketBallDatabase.cs" />
+    <Compile Include="Migrations\201702141931574_BasketBallDatabase.Designer.cs">
+      <DependentUpon>201702141931574_BasketBallDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\BattleHelper.cs" />
     <Compile Include="Model\BattleLog.cs" />
     <Compile Include="Model\ChosenAttacks.cs" />
@@ -387,6 +391,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201702141931574_BasketBallDatabase.resx">
+      <DependentUpon>201702141931574_BasketBallDatabase.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
