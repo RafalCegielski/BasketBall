@@ -7,13 +7,13 @@ namespace BasketBallMVC.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addLevelsAndMaxValues : IMigrationMetadata
+    public sealed partial class BasketBallDatabase : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addLevelsAndMaxValues));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(BasketBallDatabase));
         
         string IMigrationMetadata.Id
         {
-            get { return "201609181732457_addLevelsAndMaxValues"; }
+            get { return "201702141931574_BasketBallDatabase"; }
         }
         
         string IMigrationMetadata.Source
